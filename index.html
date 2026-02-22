@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradeVision IA | Análise Técnica por Imagem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="logo">TradeVision <span>IA</span></a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="planos.html">Planos</a>
+      <a href="login.html">Login</a>
+      <a href="suporte.html">Suporte</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">SaaS de análise técnica para traders</p>
+      <h1>Análise Técnica por Imagem com IA</h1>
+      <p class="subtitle">Envie um print do seu gráfico e receba uma leitura automatizada com contexto de tendência, suporte, resistência e possíveis cenários de entrada e saída.</p>
+      <a href="login.html" class="btn btn-primary">Começar Agora</a>
+    </section>
+
+    <section class="panel upload-panel">
+      <h2>Upload para Análise</h2>
+      <p>Faça upload da imagem do gráfico pelo PC ou celular. A pré-visualização aparece automaticamente antes do envio.</p>
+
+      <div class="upload-grid">
+        <label class="upload-field" for="imageInput">
+          <span>Selecionar imagem</span>
+          <input type="file" id="imageInput" accept="image/*" />
+        </label>
+
+        <div class="preview-box" id="previewBox">
+          <p>Nenhuma imagem selecionada.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-secondary" id="analyzeBtn" type="button" disabled>Analisar</button>
+
+      <div class="loading" id="loadingStatus" aria-live="polite" hidden>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <strong>Analisando...</strong>
+      </div>
+
+      <article class="response-area" id="analysisResponse" aria-live="polite">
+        <h3>Resposta da IA</h3>
+        <p>A análise aparecerá aqui após o envio da imagem.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> TradeVision IA. Tecnologia para decisões melhores.</small>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>
